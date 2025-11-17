@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+
+  --color-primary: #050642;
+  --color-secondary: #004AAD;
+  --color-light: #FFFFFF;
+  --color-descriprion: #595959;
+}
+
+@layer components {
+   h1,h2,h3, p {
+   @apply tracking-wide
+  }
+}
+
+body {
+  font-family: var(--font-roboto);
+}
