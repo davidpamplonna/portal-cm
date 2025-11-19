@@ -1,0 +1,33 @@
+{
+  "HeadPhone": {
+    "name": "HeadPhone",
+    "src": "/icons/headphones.svg"
+  },
+  "Info": {
+    "name": "Info",
+    "src": "/icons/info.svg"
+  },
+  "Envelope": {
+    "name": "Envelope",
+    "src": "/icons/envelope.svg"
+  },
+  "Sitemap": {
+    "name": "Sitemap",
+    "src": "/icons/sitemap.svg"
+  },
+   "Close": {
+    "name": "Close",
+    "src": "/icons/close.svg"
+  },
+   "Menu": {
+    "name": "Menu",
+    "src": "/icons/menu.svg"
+  },
+   "Search": {
+    "name": "Search",
+    "src": "/icons/search.svg"
+  }
+
+}
+
+

@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Câmara aprova novo plano de mobilidade urbana",
+    "description": "O plenário aprovou um conjunto de medidas para melhorar o transporte público e incentivar ciclovias.",
+    "image": "https://example.com/images/mobilidade.jpg",
+    "date": "2025-02-10",
+    "category": "Mobilidade"
+  },
+  {
+    "title": "Projeto de revitalização do centro histórico é apresentado",
+    "description": "Arquitetos e historiadores expuseram o plano de restauração das principais praças do centro.",
+    "image": "https://example.com/images/centro-historico.jpg",
+    "date": "2025-02-08",
+    "category": "Urbanismo"
+  },
+  {
+    "title": "Câmara lança programa de apoio a pequenos empreendedores",
+    "description": "Iniciativa oferece capacitação e microcrédito para estimular a economia local.",
+    "image": "https://example.com/images/empreendedores.jpg",
+    "date": "2025-02-05",
+    "category": "Economia"
+  },
+  {
+    "title": "Sessão especial discute segurança pública no município",
+    "description": "Representantes da polícia e comunidade debateram ações para reduzir ocorrências.",
+    "image": "https://example.com/images/seguranca.jpg",
+    "date": "2025-02-03",
+    "category": "Segurança"
+  },
+  {
+    "title": "Projeto ambiental prevê ampliação de áreas verdes",
+    "description": "A proposta estabelece novas metas de arborização e preservação de nascentes.",
+    "image": "https://example.com/images/meio-ambiente.jpg",
+    "date": "2025-02-01",
+    "category": "Meio Ambiente"
+  },
+  {
+    "title": "Câmara promove fórum sobre educação inclusiva",
+    "description": "Especialistas discutiram estratégias para inclusão de alunos com deficiência.",
+    "image": "https://example.com/images/educacao.jpg",
+    "date": "2025-01-29",
+    "category": "Educação"
+  },
+  {
+    "title": "Audiência pública debate melhoria na coleta seletiva",
+    "description": "Cidadãos participaram apresentando desafios e sugestões para otimizar o serviço.",
+    "image": "https://example.com/images/coleta-seletiva.jpg",
+    "date": "2025-01-27",
+    "category": "Sustentabilidade"
+  },
+  {
+    "title": "Novo complexo esportivo começa a ser construído",
+    "description": "A obra deve beneficiar jovens atletas com novas quadras e espaços de treinamento.",
+    "image": "https://example.com/images/esporte.jpg",
+    "date": "2025-01-25",
+    "category": "Esportes"
+  },
+  {
+    "title": "Programa de iluminação pública inteligente é ampliado",
+    "description": "Tecnologia LED e sensores de presença serão instalados em mais bairros.",
+    "image": "https://example.com/images/iluminacao.jpg",
+    "date": "2025-01-22",
+    "category": "Infraestrutura"
+  },
+  {
+    "title": "Câmara realiza campanha de conscientização sobre dengue",
+    "description": "Ações educativas são promovidas para reduzir focos do mosquito Aedes aegypti.",
+    "image": "https://example.com/images/dengue.jpg",
+    "date": "2025-01-20",
+    "category": "Saúde"
+  }
+]
