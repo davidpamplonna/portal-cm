@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Página Inicial" },
@@ -9,22 +10,46 @@ const navLinks = [
   { href: "/transparencia", label: "Transparência" },
 ];
 
-export function Menu({className}: {className?:string}) {
+
+type MenuVariante = "desktop" | "mobile"
 
 
-  return (
-    <>
-      {navLinks.map(({ href, label }) => (
-        <Link
-          key={label}
-          href={href}
-          className={className}
-        >
-          {label}
-        </Link>
-      ))}
-      
+export function Menu({
+  variant = 'desktop',
+  className,
+}: {
+  variant?: MenuVariante;
+  className?: string;
+}){
+
+    const pathname = usePathname();
+
+
+  const styles = {
+      desktop:
+      "hover:text-secondary transition-colors duration-200 uppercase font-semibold",
+    mobile:
+      "text-light uppercase text-sm font-semibold hover:text-primary transition-colors",
+  }
+
+
+  return(
+  <>
+      {navLinks.map(({ href, label }) => {
+        const active = pathname === href;
+
+        return (
+          <Link
+            key={href}
+            href={href}
+            className={`${styles[variant]} ${
+              active ? "text-gray-200 font-bold" : ""
+            }`}
+          >
+            {label}
+          </Link>
+        );
+      })}
     </>
-  );
+  )
 }
-
