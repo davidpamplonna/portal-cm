@@ -1,9 +1,10 @@
 "use client";
 
-
-import { Icon } from "../ui/Icon";
+import { Icon } from "@/src/ui/Icon";
 import { Logo } from "./Logo";
 import { Menu } from "./menu";
+
+
 
 export function MobileMenu({
   open,
@@ -33,7 +34,10 @@ export function MobileMenu({
           <Logo />
         </div>
 
-        <nav className="flex flex-col gap-6 mt-4 text-light" aria-label="Menu mobile">
+        <nav
+          className="flex flex-col gap-6 mt-4 text-light"
+          aria-label="Menu mobile"
+        >
           <Menu variant="mobile" />
         </nav>
       </div>

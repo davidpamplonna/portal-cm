@@ -1,6 +1,7 @@
 "use client";
 
-import { Icon } from "../ui/Icon";
+import { Icon } from "@/src/ui/Icon";
+
 
 
 export function SearchModal({

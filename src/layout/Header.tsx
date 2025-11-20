@@ -1,14 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Menu } from "../components/Header/menu";
+import { Logo } from "../components/Header/Logo";
+import { TopBar } from "../components/Header/TopBar";
+import { Overlay } from "../components/Header/Overlay";
+import { MobileMenu } from "../components/Header/MenuMobile";
+import { SearchModal } from "../components/Header/SearchModal";
 import { Icon } from "../ui/Icon";
-import { Menu } from "../components/menu";
-import { Logo } from "../components/Logo";
-import { TopBar } from "../components/TopBar";
-import { Overlay } from "../components/Overlay";
-import { MobileMenu } from "../components/MenuMobile";
-import { SearchModal } from "../components/SearchModal";
-
 
 
 export function Header() {

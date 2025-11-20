@@ -26,6 +26,10 @@
    "Search": {
     "name": "Search",
     "src": "/icons/search.svg"
+  },
+   "Files": {
+    "name": "Files",
+    "src": "/icons/Files.svg"
   }
 
 }

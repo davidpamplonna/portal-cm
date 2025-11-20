@@ -12,7 +12,7 @@ export function Logo() {
         width={230}
         height={90}
         priority
-        className=" w-[140px] h-[64px] sm:w-[180px] sm:h-[70px] md:w-[230px] md:h-[98px] object-contain"
+        className=" w-[140px] h-16 sm:w-[180px] sm:h-[70px] md:w-[230px] md:h-[98px] object-contain"
       />
     </Link>
   );

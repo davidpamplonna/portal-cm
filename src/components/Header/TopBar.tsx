@@ -1,5 +1,5 @@
+import { Icon } from "@/src/ui/Icon";
 import Link from "next/link";
-import { Icon } from "../ui/Icon";
 
 const topLinks = [
   { href: "/ouvidoria", icon: "HeadPhone" as const, label: "Ouvidoria" },

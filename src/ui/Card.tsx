@@ -1,0 +1,95 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Icon, type IconName } from "./Icon";
+import IconData from "@/src/data/icons.json"
+
+type CardVariant = "primary" | "secondary";
+
+interface CardProps {
+  variant?: CardVariant;
+  title: string;
+  description?: string;
+  link?: string;
+  label?: string;
+  icon?: IconName;
+}
+
+const variantConfig = {
+  primary: {
+    container:
+      "bg-secondary text-white hover:bg-secondary/95 hover:-translate-y-1 p-8 md:p-4",
+    iconWrapper: "bg-transparent p-3 rounded-full",
+    iconColor: "brightness-0 invert",
+    title: "text-md font-semibold text-light",
+    description: "hidden",
+    link: "hidden",
+  },
+  secondary: {
+    container:
+      "bg-light/90 flex flex-col justify-center items-center text-center rounded-xl py-6 px-1 md:px-4 hover:bg-light focus:ring-2 focus:ring-primary/50 focus:outline-none hover:-translate-y-1",
+    iconWrapper: "bg-primary/10 rounded-full p-3 mb-3",
+    iconColor: "text-primary",
+    title: "text-primary font-bold text-base md:text-lg",
+    description: "mt-2 text-gray-800 text-sm md:text-base",
+    link: "flex gap-2 mt-2 text-gray-700 text-xs md:text-sm hover:text-secondary transition-all duration-300",
+  },
+};
+
+export function Card({
+  variant = "primary",
+  title,
+  description,
+  link,
+  label = "Consultar",
+  icon,
+}: CardProps) {
+  const baseStyles =
+    "rounded-md flex flex-col justify-center items-center text-center transition-transform duration-300 overflow-hidden";
+
+  const v = variantConfig[variant];
+
+  const cardContent = (
+    <>
+      {icon && (
+        <div className={v.iconWrapper}>
+          <Icon
+            icon={icon}
+            width={40}
+            height={40}
+            className={`w-8 h-8 md:w-10 md:h-10 ${v.iconColor}`}
+          />
+        </div>
+      )}
+
+      <h3 className={v.title}>{title}</h3>
+
+      {description && <p className={v.description}>{description}</p>}
+
+      {variant === "secondary" && link && (
+        <Link href={link} className={v.link}>
+          {label}
+          <Image
+            src="/icons/arrow-right.svg"
+            alt=""
+            width={14}
+            height={14}
+          />
+        </Link>
+      )}
+    </>
+  );
+
+  if (variant === "primary" && link) {
+    return (
+      <Link href={link} className={`${baseStyles} ${v.container}`}>
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={`${baseStyles} ${v.container}`}>
+      {cardContent}
+    </div>
+  );
+}
