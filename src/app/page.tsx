@@ -1,8 +1,17 @@
 import { HeroSearch } from "../components/HeroSection/HeroSearch";
 import { HeroTitle } from "../components/HeroSection/HeroTitle";
 import { Card } from "../ui/Card";
+import { Title } from "../ui/Title";
+import { Councilor } from "../components/councilor/Councilor";
+
+import dataNews from '@/src/data/news.json'
+import { CouncilorList } from "../components/councilor/CouncilorList";
 
 export default function Home() {
+  const main = dataNews.news.slice(0,3)
+  const secundary = dataNews.news.slice(0, 3)
+  const councilor = dataNews.actionNews.slice(0,4)
+
   return (
     <div>
       <div className="w-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat min-h-[540px] bg-center md:bg-top">
@@ -47,6 +56,20 @@ export default function Home() {
             </div>
           </div>
         </section>
+      </div>
+      <div className=" max-w-7xl mx-auto py-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-7 items-start px-3 md:px-0">
+          {/* coluna da esquerda  */}
+          <section>
+            <Title title="Últimas notícias" showLink={true} href="/noticias"  />
+            <Councilor mainNews={main} secondaryNews={secundary} />
+          </section>
+          {/* coluna da direita  */}
+          <aside >
+            <Title title="Vereadores em ação" showLink={true} href="/vereadores-em-ação"  />
+            <CouncilorList newsList={councilor} />
+          </aside>
+        </div>
       </div>
     </div>
   );

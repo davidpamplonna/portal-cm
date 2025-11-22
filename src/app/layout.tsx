@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "../styles/globals.css";
 import { Header } from "../layout/Header";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const roboto = Roboto({
   variable: "--font-roboto",
