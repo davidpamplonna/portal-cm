@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon, type IconName } from "./Icon";
-import IconData from "@/src/data/icons.json"
 
 type CardVariant = "primary" | "secondary";
 
@@ -17,7 +16,7 @@ interface CardProps {
 const variantConfig = {
   primary: {
     container:
-      "bg-secondary text-white hover:bg-secondary/95 hover:-translate-y-1 p-8 md:p-4",
+      "bg-secondary text-white hover:bg-secondary/95 hover:-translate-y-1 p-5 md:p-4 overflow-hidden",
     iconWrapper: "bg-transparent p-3 rounded-full",
     iconColor: "brightness-0 invert",
     title: "text-md font-semibold text-light",
@@ -29,7 +28,7 @@ const variantConfig = {
       "bg-light/90 flex flex-col justify-center items-center text-center rounded-xl py-6 px-1 md:px-4 hover:bg-light focus:ring-2 focus:ring-primary/50 focus:outline-none hover:-translate-y-1",
     iconWrapper: "bg-primary/10 rounded-full p-3 mb-3",
     iconColor: "text-primary",
-    title: "text-primary font-bold text-base md:text-lg",
+    title: "text-primary font-bold text-base md:text-lg ",
     description: "mt-2 text-gray-800 text-sm md:text-base",
     link: "flex gap-2 mt-2 text-gray-700 text-xs md:text-sm hover:text-secondary transition-all duration-300",
   },
@@ -44,7 +43,7 @@ export function Card({
   icon,
 }: CardProps) {
   const baseStyles =
-    "rounded-md flex flex-col justify-center items-center text-center transition-transform duration-300 overflow-hidden";
+    "rounded-md flex flex-col justify-center items-center text-center transition-transform duration-300";
 
   const v = variantConfig[variant];
 
@@ -56,7 +55,7 @@ export function Card({
             icon={icon}
             width={40}
             height={40}
-            className={`w-8 h-8 md:w-10 md:h-10 ${v.iconColor}`}
+            className={`w-8 h-8 md:w-9 md:h-9 ${v.iconColor}`}
           />
         </div>
       )}

@@ -4,13 +4,18 @@ import { Card } from "../ui/Card";
 import { Title } from "../ui/Title";
 import { Councilor } from "../components/councilor/Councilor";
 
-import dataNews from '@/src/data/news.json'
+import dataNews from "@/src/data/news.json";
 import { CouncilorList } from "../components/councilor/CouncilorList";
+import { Icon } from "../ui/Icon";
+
+import {quickAccessCards} from "@/src/types/quickAccessCards"
+
+import { atividadesLegislativas, publicacoesOficiais } from "@/src/types/card";
 
 export default function Home() {
-  const main = dataNews.news.slice(0,3)
-  const secundary = dataNews.news.slice(0, 3)
-  const councilor = dataNews.actionNews.slice(0,4)
+  const main = dataNews.news.slice(0, 3);
+  const secundary = dataNews.news.slice(0, 3);
+  const councilor = dataNews.actionNews.slice(0, 4);
 
   return (
     <div>
@@ -21,38 +26,17 @@ export default function Home() {
 
           <div className="mt-10 w-full">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-[1000px] mx-auto">
-             <Card
-              variant="secondary"
-              title="Projetos de Lei"
-              icon="Files"
-              description="Acompanhe os projetos em tramitação"
-              link="/projetos-de-lei"
-              label="Consultar"
-            />
-            <Card
-              variant="secondary"
-              title="Leis Municipais"
-              icon="Files"
-              description="Consulte a legislação municipal"
-              link="/leis-municipais"
-              label="Consultar"
-            />
-            <Card
-              variant="secondary"
-              title="Documentos Oficiais"
-              icon="Files"
-              description="Atas, relatórios e publicações da Câmara"
-              link="/documentos-oficiais"
-              label="Consultar"
-            />
-            <Card
-              variant="secondary"
-              title="Audiências Públicas"
-              icon="Files"
-              description="Cronograma das sessões ordinárias/extraordinárias"
-              link="/audiencias-publicas"
-              label="Consultar"
-            />
+              {quickAccessCards.map((card) => (
+                <Card 
+                key={card.title}
+                icon={card.icon}
+                variant="secondary"
+                title={card.title}
+                description={card.description}
+                link={card.title}
+                label="Consultar"
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -61,14 +45,78 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-7 items-start px-3 md:px-0">
           {/* coluna da esquerda  */}
           <section>
-            <Title title="Últimas notícias" showLink={true} href="/noticias"  />
+            <Title title="Últimas notícias" showLink={true} href="/noticias" />
             <Councilor mainNews={main} secondaryNews={secundary} />
           </section>
           {/* coluna da direita  */}
-          <aside >
-            <Title title="Vereadores em ação" showLink={true} href="/vereadores-em-ação"  />
+          <aside>
+            <Title
+              title="Vereadores em ação"
+              showLink={true}
+              href="/vereadores-em-ação"
+            />
             <CouncilorList newsList={councilor} />
           </aside>
+        </div>
+      </div>
+      <div className="bg-primary w-full py-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 py-3 px-3 md:px-0">
+            {/* cols left */}
+            <section className="md:border-r md:border-gray-100/20 md:px-3">
+              <div className="flex gap-3 items-center mb-3">
+                <Icon icon={"Balance"} width={28} height={28} />
+                <Title
+                  title={"Atividades Legislativas"}
+                  showBorder={false}
+                  showLink={false}
+                  variant="secondary"
+                />
+              </div>
+              <p className="text-light/70">
+                Nesta seção estão reunidas todas as proposições dos vereadores,
+                que são ferramentas formais para sugerir, debater e aprovar
+                ações que impactam a população.
+              </p>
+              <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                {atividadesLegislativas.map((item) => (
+                  <Card
+                    title={item.title}
+                    icon="File"
+                    key={item.title}
+                    link={item.link}
+                  />
+                ))}
+              </article>
+            </section>
+            {/* cols rigth */}
+            <section>
+              <div className="flex gap-3 items-center mb-3">
+                <Icon icon={"File"} width={28} height={28} />
+                <Title
+                  title={"Publicações Oficiais"}
+                  showBorder={false}
+                  showLink={false}
+                  variant="secondary"
+                />
+              </div>
+              <p className="text-light/70">
+                Nesta seção estão reunidas todas as proposições dos vereadores,
+                que são ferramentas formais para sugerir, debater e aprovar
+                ações que impactam a população.
+              </p>
+              <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                {publicacoesOficiais.map((item) => (
+                  <Card
+                    title={item.title}
+                    icon="File"
+                    key={item.title}
+                    link={item.link}
+                  />
+                ))}
+              </article>
+            </section>
+          </div>
         </div>
       </div>
     </div>

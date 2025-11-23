@@ -30,8 +30,15 @@
    "Files": {
     "name": "Files",
     "src": "/icons/Files.svg"
+  },
+  "Balance": {
+    "name": "Balance",
+    "src": "/icons/balance.svg"
+  },
+  "File": {
+    "name": "File",
+    "src": "/icons/file.svg"
   }
-
 }
 
 

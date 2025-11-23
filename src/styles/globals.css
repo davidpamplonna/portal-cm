@@ -11,7 +11,7 @@
 
 @layer components {
    h1,h2,h3, p {
-   @apply tracking-wide
+   @apply tracking-wide leading-snug
   }
 }
 

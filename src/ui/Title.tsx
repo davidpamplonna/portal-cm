@@ -24,7 +24,7 @@ export function Title({
         primary:
         "font-bold text-primary text-xl md:text-2xl uppercase",
         secondary:
-        "<text-light text-xl md:text-2xl font-bold uppercase"
+        "text-light text-xl md:text-2xl font-bold uppercase"
     }
 
 
