@@ -38,6 +38,18 @@
   "File": {
     "name": "File",
     "src": "/icons/file.svg"
+  },
+  "Arrow-Left": {
+    "name": "Arrow-Left",
+    "src": "/icons/arrow-left.svg"
+  },
+   "Arrow-Rigth2": {
+    "name": "Arrow-Rigth2",
+    "src": "/icons/arrow-right2.svg"
+  },
+   "Arrow-Rigth-Top": {
+    "name": "Arrow-Rigth-Top",
+    "src": "/icons/arrow-right-top.svg"
   }
 }
 

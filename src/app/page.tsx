@@ -11,14 +11,22 @@ import { Icon } from "../ui/Icon";
 import {quickAccessCards} from "@/src/types/quickAccessCards"
 
 import { atividadesLegislativas, publicacoesOficiais } from "@/src/types/card";
+import CouncilCarousel from "../components/CouncilCarousel";
+
+
+
+import dataCouncil from '@/src/data/council.json'
+import { Footer } from "../layout/Footer";
 
 export default function Home() {
   const main = dataNews.news.slice(0, 3);
   const secundary = dataNews.news.slice(0, 3);
   const councilor = dataNews.actionNews.slice(0, 4);
 
+  const councilSlider =  dataCouncil.council;
+
   return (
-    <div>
+    <div className="w-full">
       <div className="w-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat min-h-[540px] bg-center md:bg-top">
         <section className="py-8 md:py-16 px-4">
           <HeroTitle />
@@ -119,6 +127,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+        <div className="max-w-7xl mx-auto px-4">
+          <CouncilCarousel council={councilSlider} />
+        </div>
+        <Footer />
     </div>
   );
 }

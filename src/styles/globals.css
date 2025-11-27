@@ -13,6 +13,10 @@
    h1,h2,h3, p {
    @apply tracking-wide leading-snug
   }
+
+  button {
+    @apply cursor-pointer
+  }
 }
 
 body {

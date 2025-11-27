@@ -1,0 +1,84 @@
+{
+    "council": [
+  {
+    "id": 1,
+    "name": "Ana Luísa Pereira",
+    "cargo": "Presidente",
+    "mandato": "2025-2028",
+    "materias": 12,
+    "image": "/assets/vereador3.png"
+  },
+  {
+    "id": 2,
+    "name": "Marcos Vinícius Andrade",
+    "cargo": "Vice-Presidente",
+    "mandato": "2025-2028",
+    "materias": 8,
+    "image": "/assets/vereador2.png"
+  },
+  {
+    "id": 3,
+    "name": "Carolina Souza Martins",
+    "cargo": "1º Secretária",
+    "mandato": "2025-2028",
+    "materias": 15,
+    "image": "/assets/vereador3.png"
+  },
+  {
+    "id": 4,
+    "name": "Rafael Gomes Duarte",
+    "cargo": "2º Secretario",
+    "mandato": "2025-2028",
+    "materias": 5,
+    "image": "/assets/vereador1.png"
+  },
+  {
+    "id": 5,
+    "name": "Júlia Ferreira Costa",
+    "cargo": "Vereadora",
+    "mandato": "2025-2028",
+    "materias": 19,
+    "image": "/assets/vereador2.png"
+  },
+  {
+    "id": 6,
+    "name": "Eduardo Lima Barros",
+    "cargo": "Vereador",
+    "mandato": "2025-2028",
+    "materias": 9,
+    "image": "/assets/vereador3.png"
+  },
+  {
+    "id": 7,
+    "name": "Beatriz Nascimento Prado",
+    "cargo": "Vereadora",
+    "mandato": "2025-2028",
+    "materias": 14,
+    "image": "/assets/vereador1.png"
+  },
+  {
+    "id": 8,
+    "name": "Luís Henrique Bastos",
+    "cargo": "Vereador",
+    "mandato": "2025-2028",
+    "materias": 7,
+    "image": "/assets/vereador2.png"
+  },
+  {
+    "id": 9,
+    "name": "Patrícia Moreira Silva",
+    "cargo": "Vereadora",
+    "mandato": "2025-2028",
+    "materias": 11,
+    "image": "/assets/vereador3.png"
+  },
+  {
+    "id": 10,
+    "name": "Renato Albuquerque Torres",
+    "cargo": "Vereador",
+    "mandato": "2025-2028",
+    "materias": 6,
+    "image": "/assets/vereador1.png"
+  }
+]
+}

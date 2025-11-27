@@ -68,8 +68,8 @@ export function Card({
         <Link href={link} className={v.link}>
           {label}
           <Image
-            src="/icons/arrow-right.svg"
-            alt=""
+            src="/icons/arrow-right-top.svg"
+            alt="arrow-right-top"
             width={14}
             height={14}
           />

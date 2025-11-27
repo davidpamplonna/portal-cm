@@ -1,7 +1,6 @@
 "use client";
 
 import type { News } from "@/src/types/news";
-import { spawn } from "child_process";
 import Image from "next/image";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -76,7 +75,7 @@ export function Councilor({ mainNews, secondaryNews }: CouncilorProps) {
               )}
             </div>
             <div className="absolute inset-0 flex  items-end p-3 bg-linear-to-t from-black/90 via-transparent">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <h3 className="text-light text-md md:text-sm font-semibold line-clamp-2">
                   {news.title}
                 </h3>
