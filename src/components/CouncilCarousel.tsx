@@ -19,7 +19,7 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
         {/* esquerda texto */}
         <div className="flex-1 md:w-1/3 mt-8">
           <span className="text-sm text-gray-800 mb-4">Vereadores da</span>
-          <h2 className="font-bold uppercase text-xl md:text-3xl text-primary">
+          <h2 className="font-bold uppercase text-2xl md:text-3xl text-primary">
             Câmara de Libertália
           </h2>
           <p className="text-descriprion max-w-md">
@@ -37,29 +37,31 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
           </div>
         </div>
         {/* carousel */}
-        <div className="flex-1 md:w-2/3">
+        <div className="flex-1 md:w-2/3 w-full">
           <Swiper
-          className=""
+            className="pl-4"
             modules={[Navigation, Autoplay]}
-            autoplay={{delay: 5000, }}
-            spaceBetween={24}
-            slidesPerView={1.2}
+            autoplay={{ delay: 5000 }}
+            spaceBetween={16}
+            slidesPerView={1.55}
+            centeredSlides={false}
             navigation={{
-                nextEl: ".swiper-next",
-                prevEl: ".swiper-prev",
+              nextEl: ".swiper-next",
+              prevEl: ".swiper-prev",
             }}
-             breakpoints={{
-    480: { slidesPerView: 1.6, spaceBetween: 16 },
-    640: { slidesPerView: 2, spaceBetween: 20 },
-    768: { slidesPerView: 2.5, spaceBetween: 20 },
-    1024: { slidesPerView: 3, spaceBetween: 24 },
-  }}
+            breakpoints={{
+              480: { slidesPerView: 1.4, spaceBetween: 16 },
+              640: { slidesPerView: 1.7, spaceBetween: 18 },
+              768: { slidesPerView: 2.2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
+            }}
           >
             {council.map((card) => (
-              <SwiperSlide key={card.id}
-              className={`transition-transform duration-300 py-6 ${
-                card.id % 2 === 0 ? "-translate-y-4" : "translate-y-2"
-              }`}
+              <SwiperSlide
+                key={card.id}
+                className={`transition-transform duration-300 py-6 ${
+                  card.id % 2 === 0 ? "-translate-y-4" : "translate-y-2"
+                }`}
               >
                 <div className="relative rounded-xl overflow-hidden w-full h-80">
                   <Image
@@ -70,12 +72,20 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
                   />
                   <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/90" />
                   <div className="absolute bottom-2 left-4 right-4 text-light py-2">
-                    <h4 className="text-md font-semibold uppercase">{card.name}</h4>
-                    <span className="text-sm text-gray-200/90 ">{card.cargo}</span>
-                    <div className="border-t border-light/60 mt-1"/>
+                    <h4 className="text-md font-semibold uppercase">
+                      {card.name}
+                    </h4>
+                    <span className="text-sm text-gray-200/90 ">
+                      {card.cargo}
+                    </span>
+                    <div className="border-t border-light/60 mt-1" />
                     <div className=" flex items-center justify-between mt-2">
-                      <span className="text-xs text-gray-300">Matérias: {card.materias}</span>
-                      <span className="text-xs text-gray-300">Mandato: {card.mandato}</span>
+                      <span className="text-xs text-gray-300">
+                        Matérias: {card.materias}
+                      </span>
+                      <span className="text-xs text-gray-300">
+                        Mandato: {card.mandato}
+                      </span>
                     </div>
                   </div>
                 </div>

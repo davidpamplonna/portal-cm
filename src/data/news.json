@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Câmara aprova novo plano de mobilidade urbana",
       "description": "O plenário aprovou um conjunto de medidas para melhorar o transporte público e incentivar ciclovias.",
-      "image": "/assets/note-1.png",
+      "image": "/news/post-1.png",
       "date": "10/02/2025",
       "category": "Mobilidade"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "title": "Projeto de revitalização do centro histórico é apresentado",
       "description": "Arquitetos e historiadores expuseram o plano de restauração das principais praças do centro.",
-      "image": "/assets/note-2.png",
+      "image": "/news/post-2.png",
       "date": "08/02/2025",
       "category": "Urbanismo"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "title": "Câmara lança programa de apoio a pequenos empreendedores",
       "description": "Iniciativa oferece capacitação e microcrédito para estimular a economia local.",
-      "image": "/assets/note-3.jpg",
+      "image": "/news/post-3.png",
       "date": "05/02/2025",
       "category": "Economia"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "title": "Sessão especial discute segurança pública no município",
       "description": "Representantes da polícia e comunidade debateram ações para reduzir ocorrências.",
-      "image": "/assets/note-1.png",
+      "image": "/news/post-4.png",
       "date": "03/02/2025",
       "category": "Segurança"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "title": "Projeto ambiental prevê ampliação de áreas verdes",
       "description": "A proposta estabelece novas metas de arborização e preservação de nascentes.",
-      "image": "/assets/note-2.png",
+      "image": "/news/post-5.png",
       "date": "01/02/2025",
       "category": "Meio Ambiente"
     },

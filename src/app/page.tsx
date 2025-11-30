@@ -2,10 +2,10 @@ import { HeroSearch } from "../components/HeroSection/HeroSearch";
 import { HeroTitle } from "../components/HeroSection/HeroTitle";
 import { Card } from "../ui/Card";
 import { Title } from "../ui/Title";
-import { Councilor } from "../components/councilor/Councilor";
+import { Councilor } from "../components/News/News";
 
 import dataNews from "@/src/data/news.json";
-import { CouncilorList } from "../components/councilor/CouncilorList";
+import { CouncilorList } from "../components/News/NewsList";
 import { Icon } from "../ui/Icon";
 
 import {quickAccessCards} from "@/src/types/quickAccessCards"

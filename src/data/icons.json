@@ -50,7 +50,19 @@
    "Arrow-Rigth-Top": {
     "name": "Arrow-Rigth-Top",
     "src": "/icons/arrow-right-top.svg"
-  }
+  },
+    "Facebook": {
+      "name": "Facebook",
+      "src": "/icons/facebook.svg"
+    },
+    "Instagram": {
+      "name": "Instagram",
+      "src": "/icons/instagram.svg"
+    },
+    "Youtube": {
+      "name": "Youtube",
+      "src": "/icons/youtube.svg"
+    }
 }
 
 
