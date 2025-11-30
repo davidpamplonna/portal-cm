@@ -62,7 +62,12 @@
     "Youtube": {
       "name": "Youtube",
       "src": "/icons/youtube.svg"
+    },
+    "PL": {
+      "name": "PL",
+      "src": "/icons/files.svg"
     }
+    
 }
 
 

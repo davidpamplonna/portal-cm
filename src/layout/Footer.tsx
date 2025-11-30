@@ -1,5 +1,14 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("../components/Map"), {
+  ssr: false, // Leaflet NÃO roda no servidor
+});
+
 
 
 const socialLinks = [
@@ -90,16 +99,8 @@ export function Footer() {
               Como Chegar à Câmara
             </h3>
             <div className="border-b-2 border-secondary max-w-20" />
-           <div className="mt-4">
-              <iframe
-      title="Mapa da Câmara Municipal de Libertália"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.2340968935497!2d-35.12345!3d-7.12345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaaaaaa%3A0xbbbbbbbbbbbbbbbb!2sRua%20Doutor%20Jos%C3%A9%20Ol%C3%ADmpio%20Franco!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-      width="310"
-      height="220"
-      loading="lazy"
-      className="border-0"
-      referrerPolicy="no-referrer-when-downgrade"
-    />
+           <div className="mt-4 w-[300px] h-60 overflow-hidden rounded-md">
+             <Map />
            </div>
           </section>
 

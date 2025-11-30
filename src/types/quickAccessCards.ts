@@ -12,7 +12,7 @@ interface quickAccessCardsProps{
 const quickAccessCards: quickAccessCardsProps[] = [
     {
       title: "Projetos de Lei",
-      icon: "Files",
+      icon: "PL",
       description: "Acompanhe os projetos em tramitação",
       link: "/projetos-de-lei",
     },

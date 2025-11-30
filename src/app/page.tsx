@@ -14,13 +14,12 @@ import { atividadesLegislativas, publicacoesOficiais } from "@/src/types/card";
 import CouncilCarousel from "../components/CouncilCarousel";
 
 
-
 import dataCouncil from '@/src/data/council.json'
 import { Footer } from "../layout/Footer";
 
 export default function Home() {
   const main = dataNews.news.slice(0, 3);
-  const secundary = dataNews.news.slice(0, 3);
+  const secundary = dataNews.news.slice(4, 7);
   const councilor = dataNews.actionNews.slice(0, 4);
 
   const councilSlider =  dataCouncil.council;

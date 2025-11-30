@@ -44,7 +44,7 @@
       "id": 6,
       "title": "Câmara promove fórum sobre educação inclusiva",
       "description": "Especialistas discutiram estratégias para inclusão de alunos com deficiência.",
-      "image": "/assets/note-3.jpg",
+      "image": "/news/post-6.png",
       "date": "29/01/2025",
       "category": "Educação"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "title": "Audiência pública debate melhoria na coleta seletiva",
       "description": "Cidadãos participaram apresentando desafios e sugestões para otimizar o serviço.",
-      "image": "/assets/note-1.png",
+      "image": "/news/post-7.png",
       "date": "27/01/2025",
       "category": "Sustentabilidade"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "title": "Novo complexo esportivo começa a ser construído",
       "description": "A obra deve beneficiar jovens atletas com novas quadras e espaços de treinamento.",
-      "image": "/assets/note-2.pngg",
+      "image": "/news/post-7.png",
       "date": "25/01/2025",
       "category": "Esportes"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "title": "Programa de iluminação pública inteligente é ampliado",
       "description": "Tecnologia LED e sensores de presença serão instalados em mais bairros.",
-      "image": "/assets/note-3.jpg",
+      "image": "/news/post-7.png",
       "date": "22/01/2025",
       "category": "Infraestrutura"
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "title": "Câmara realiza campanha de conscientização sobre dengue",
       "description": "Ações educativas são promovidas para reduzir focos do mosquito Aedes aegypti.",
-      "image": "/assets/note-1.png",
+      "image": "/news/post-7.png",
       "date": "20/01/2025",
       "category": "Saúde"
     }
@@ -88,70 +88,70 @@
       "title": "Vereadores entregam novo projeto de revitalização do centro",
       "date": "10/02/2025",
       "description": "A Câmara Municipal apresentou um projeto de revitalização que inclui melhorias na iluminação pública, acessibilidade e paisagismo da área central da cidade.",
-      "image": "/assets/note-1.png"
+      "image": "/actionnews/post-1.png"
     },
     {
       "id": 2,
       "title": "Comissão de Educação visita escolas municipais",
       "date": "08/02/2025",
       "description": "Vereadores da Comissão de Educação realizaram visitas técnicas a quatro escolas para avaliar a infraestrutura e propor melhorias no ensino.",
-      "image": "/assets/note-2.png"
+      "image": "/actionnews/post-2.png"
     },
     {
       "id": 3,
       "title": "Vereadores aprovam programa de incentivo ao comércio local",
       "date": "05/02/2025",
       "description": "O plenário aprovou por unanimidade um programa de incentivo fiscal para fortalecer pequenos comerciantes do município.",
-      "image": "/assets/note-3.jpg"
+      "image": "/actionnews/post-3.1.png"
     },
     {
       "id": 4,
       "title": "Audiência pública discute mobilidade urbana",
       "date": "03/02/2025",
       "description": "A Câmara promoveu uma audiência pública com especialistas e moradores para discutir soluções de mobilidade e transporte público.",
-      "image": "/assets/note-1.png"
+      "image": "/actionnews/post-4.png"
     },
     {
       "id": 5,
       "title": "Vereadores acompanham obras de pavimentação no bairro São José",
       "date": "01/02/2025",
       "description": "Parlamentares visitaram as obras de pavimentação para verificar o andamento e garantir a qualidade do serviço prestado.",
-      "image": "/assets/note-2.png"
+      "image": "/actionnews/post-4.png"
     },
     {
       "id": 6,
       "title": "Câmara lança campanha de combate à dengue",
       "date": "30/01/2025",
       "description": "Os vereadores iniciaram uma campanha de conscientização para prevenção da dengue, com ações educativas em diversos bairros.",
-      "image": "/assets/note-3.jpg"
+      "image": "/actionnews/post-4.png"
     },
     {
       "id": 7,
       "title": "Comissão de Saúde vistoria unidades de atendimento",
       "date": "28/01/2025",
       "description": "A Comissão de Saúde esteve em unidades básicas para identificar demandas prioritárias e propor soluções para melhorar o atendimento.",
-      "image": "/assets/note-1.png"
+      "image": "/actionnews/post-4.png"
     },
     {
       "id": 8,
       "title": "Vereadores promovem mutirão de limpeza em áreas públicas",
       "date": "26/01/2025",
       "description": "A ação reuniu voluntários e servidores municipais para remover lixo e entulho de praças e terrenos abandonados.",
-      "image": "/assets/note-2.png"
+      "image": "/actionnews/post-4.png"
     },
     {
       "id": 9,
       "title": "Projeto de inclusão digital é apresentado na Câmara",
       "date": "25/01/2025",
       "description": "O projeto prevê a instalação de pontos de Wi-Fi gratuito em locais públicos e cursos de capacitação digital para moradores.",
-      "image": "/assets/note-3.jpg"
+      "image": "/actionnews/post-4.png"
     },
     {
       "id": 10,
       "title": "Vereadores participam de encontro regional de segurança pública",
       "date": "22/01/2025",
       "description": "Representando a cidade, vereadores discutiram estratégias regionais para reduzir índices de criminalidade e ampliar ações preventivas.",
-      "image": "/assets/note-1.png"
+      "image": "/actionnews/post-4.png"
     }
   ]
 }
