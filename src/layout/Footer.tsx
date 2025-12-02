@@ -41,8 +41,8 @@ export function Footer() {
                 <Image
                   src={social.icon}
                   alt={social.name}
-                  width={35}
-                  height={35}
+                  width={32}
+                  height={32}
                 />
               </Link>
              ))}
@@ -113,8 +113,8 @@ export function Footer() {
                 <Image
                   src="/assets/cm-radio.png"
                   alt="radio logo"
-                  width={240}
-                  height={240}
+                  width={220}
+                  height={220}
                 />
               </Link>
             </div>

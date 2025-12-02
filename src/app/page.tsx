@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <div className="w-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat min-h-[540px] bg-center md:bg-top">
-        <section className="py-8 md:py-16 px-4">
+        <section className="py-8 md:py-10 px-4">
           <HeroTitle />
           <HeroSearch />
 

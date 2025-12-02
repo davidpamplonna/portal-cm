@@ -2,11 +2,11 @@
     "council": [
   {
     "id": 1,
-    "name": "Ana Luísa Pereira",
+    "name": "Carolina Souza Martins",
     "cargo": "Presidente",
     "mandato": "2025-2028",
     "materias": 12,
-    "image": "/assets/vereador3.png"
+    "image": "/council/carolina-souza.png"
   },
   {
     "id": 2,
@@ -14,15 +14,15 @@
     "cargo": "Vice-Presidente",
     "mandato": "2025-2028",
     "materias": 8,
-    "image": "/assets/vereador2.png"
+    "image": "/council/marcos-andrade.png"
   },
   {
     "id": 3,
-    "name": "Carolina Souza Martins",
+    "name": "Beatriz Nascimento Prado",
     "cargo": "1º Secretária",
     "mandato": "2025-2028",
     "materias": 15,
-    "image": "/assets/vereador3.png"
+    "image": "/council/beatriz-prado.png"
   },
   {
     "id": 4,
@@ -30,7 +30,7 @@
     "cargo": "2º Secretario",
     "mandato": "2025-2028",
     "materias": 5,
-    "image": "/assets/vereador1.png"
+    "image": "/council/rafael-duarte.png"
   },
   {
     "id": 5,
@@ -38,7 +38,7 @@
     "cargo": "Vereadora",
     "mandato": "2025-2028",
     "materias": 19,
-    "image": "/assets/vereador2.png"
+    "image": "/council/julia-ferreira.png"
   },
   {
     "id": 6,
@@ -46,39 +46,15 @@
     "cargo": "Vereador",
     "mandato": "2025-2028",
     "materias": 9,
-    "image": "/assets/vereador3.png"
+    "image": "/council/eduardo-lima.png"
   },
   {
     "id": 7,
-    "name": "Beatriz Nascimento Prado",
+    "name": "Ana Luísa Pereira",
     "cargo": "Vereadora",
     "mandato": "2025-2028",
     "materias": 14,
-    "image": "/assets/vereador1.png"
-  },
-  {
-    "id": 8,
-    "name": "Luís Henrique Bastos",
-    "cargo": "Vereador",
-    "mandato": "2025-2028",
-    "materias": 7,
-    "image": "/assets/vereador2.png"
-  },
-  {
-    "id": 9,
-    "name": "Patrícia Moreira Silva",
-    "cargo": "Vereadora",
-    "mandato": "2025-2028",
-    "materias": 11,
-    "image": "/assets/vereador3.png"
-  },
-  {
-    "id": 10,
-    "name": "Renato Albuquerque Torres",
-    "cargo": "Vereador",
-    "mandato": "2025-2028",
-    "materias": 6,
-    "image": "/assets/vereador1.png"
+    "image": "/council/ana-luisa.png"
   }
 ]
 }
