@@ -7,7 +7,7 @@ export function HeroSearch() {
         <input
           type="search"
           placeholder="Encontre serviços, notícias e conteúdos informativos..."
-          className="flex-1 px-3 py-2 text-md text-gray-600 placeholder:text-gray-500 outline-none"
+          className="flex-1 px-3 py-2 text-md text-gray-600 placeholder:text-gray-500 outline-none "
           aria-label="Buscar conteúdo no portal"
         />
         <button

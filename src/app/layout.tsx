@@ -5,6 +5,7 @@ import { Header } from "../layout/Header";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Footer } from "../layout/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -31,6 +32,8 @@ export default function RootLayout({
        <main>
            {children}
        </main>
+        {/* Footer */}
+      <Footer />
       </body>
     </html>
   );

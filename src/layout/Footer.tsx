@@ -5,13 +5,14 @@ import Link from "next/link";
 
 import dynamic from "next/dynamic";
 
+import { SocialLink } from "../types/socialLink";
+
 const Map = dynamic(() => import("../components/Map"), {
-  ssr: false, // Leaflet NÃO roda no servidor
+  ssr: false, 
 });
 
 
-
-const socialLinks = [
+const socialLinks: SocialLink[] = [
   { name: "facebook", url: "/facebook", icon: "/icons/facebook.svg" },
   { name: "instagram", url: "/instagram", icon: "/icons/instagram.svg" },
   { name: "youtube", url: "/youtube" , icon: "/icons/youtube.svg" },
@@ -36,6 +37,7 @@ export function Footer() {
               <Link 
               key={social.name} 
               href={social.url} 
+              aria-label={`Visite nossa página no ${social.name}`}
               className="hover:opacity-70 transition-opacity"
               >
                 <Image
@@ -99,7 +101,7 @@ export function Footer() {
               Como Chegar à Câmara
             </h3>
             <div className="border-b-2 border-secondary max-w-20" />
-           <div className="mt-4 w-[300px] h-60 overflow-hidden rounded-md">
+           <div className="mt-4 w-full max-w-sm h-60 overflow-hidden rounded-md">
              <Map />
            </div>
           </section>

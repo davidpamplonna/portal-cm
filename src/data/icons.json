@@ -43,8 +43,8 @@
     "name": "Arrow-Left",
     "src": "/icons/arrow-left.svg"
   },
-   "Arrow-Rigth2": {
-    "name": "Arrow-Rigth2",
+   "Arrow-Right": {
+    "name": "Arrow-Rigth",
     "src": "/icons/arrow-right2.svg"
   },
    "Arrow-Rigth-Top": {

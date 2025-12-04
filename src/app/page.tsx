@@ -1,90 +1,131 @@
+import { Metadata } from "next";
 import { HeroSearch } from "../components/HeroSection/HeroSearch";
 import { HeroTitle } from "../components/HeroSection/HeroTitle";
 import { Card } from "../ui/Card";
 import { Title } from "../ui/Title";
-import { Councilor } from "../components/News/News";
-
-import dataNews from "@/src/data/news.json";
-import { CouncilorList } from "../components/News/NewsList";
+import { News } from "../components/News/News";
+import { NewsList } from "../components/News/NewsList";
 import { Icon } from "../ui/Icon";
-
-import {quickAccessCards} from "@/src/types/quickAccessCards"
-
-import { atividadesLegislativas, publicacoesOficiais } from "@/src/types/card";
 import CouncilCarousel from "../components/CouncilCarousel";
 
+import dataNews from "@/src/data/news.json";
+import { quickAccessCards } from "@/src/types/quickAccessCards";
+import { atividadesLegislativas, publicacoesOficiais } from "@/src/types/card";
+import dataCouncil from "@/src/data/council.json";
 
-import dataCouncil from '@/src/data/council.json'
-import { Footer } from "../layout/Footer";
+// Metadados SEO
+export const metadata: Metadata = {
+  title: "Câmara Municipal de Libertália",
+  description: "Portal da Câmara Municipal com notícias, vereadores, atividades legislativas e publicações oficiais",
+  keywords: "câmara, vereadores, legislação, Libertália",
+  openGraph: {
+    type: "website",
+    url: "https://cmlibertalia.gov.br",
+    title: "Câmara Municipal de Libertália",
+    description: "Portal da Câmara Municipal com notícias, vereadores e informações oficiais",
+    images: [{ url: "/assets/og-image.png", width: 1200, height: 630 }],
+  },
+};
+
+// Constantes
+const MAIN_NEWS_COUNT = 3;
+const SECONDARY_NEWS_START = 4;
+const SECONDARY_NEWS_COUNT = 3;
+const COUNCILOR_NEWS_COUNT = 4;
+
+
+// Função auxiliar para extrair dados com segurança
+function getSafeNewsData(data: typeof dataNews) {
+  return {
+    main: data.news?.slice(0, MAIN_NEWS_COUNT) ?? [],
+    secondary: data.news?.slice(
+      SECONDARY_NEWS_START, 
+      SECONDARY_NEWS_START + SECONDARY_NEWS_COUNT
+    ) ?? [],
+    councilor: data.actionNews?.slice(0, COUNCILOR_NEWS_COUNT) ?? [],
+  };
+}
 
 export default function Home() {
-  const main = dataNews.news.slice(0, 3);
-  const secundary = dataNews.news.slice(4, 7);
-  const councilor = dataNews.actionNews.slice(0, 4);
-
-  const councilSlider =  dataCouncil.council;
+  const { main, secondary, councilor } = getSafeNewsData(dataNews);
+  const councilSlider = dataCouncil.council ?? [];
 
   return (
     <div className="w-full">
-      <div className="w-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat min-h-[540px] bg-center md:bg-top">
+      {/* Hero Section */}
+      <div className="w-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat 
+                      min-h-[540px] sm:min-h-[600px] md:min-h-[400px] 
+                      bg-center md:bg-top">
         <section className="py-8 md:py-10 px-4">
           <HeroTitle />
           <HeroSearch />
 
+          {/* Quick Access Cards */}
           <div className="mt-10 w-full">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-[1000px] mx-auto">
               {quickAccessCards.map((card) => (
                 <Card 
-                key={card.title}
-                icon={card.icon}
-                variant="secondary"
-                title={card.title}
-                description={card.description}
-                link={card.title}
-                label="Consultar"
+                  key={card.title}
+                  icon={card.icon}
+                  variant="secondary"
+                  title={card.title}
+                  description={card.description}
+                  link={card.title}
+                  label="Consultar"
                 />
               ))}
             </div>
           </div>
         </section>
       </div>
-      <div className=" max-w-7xl mx-auto py-10 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-7 items-start px-3 md:px-0">
-          {/* coluna da esquerda  */}
+
+      {/* News Section */}
+      <div className="max-w-7xl mx-auto py-10 w-full px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 items-start">
+          {/* Main News */}
           <section>
             <Title title="Últimas notícias" showLink={true} href="/noticias" />
-            <Councilor mainNews={main} secondaryNews={secundary} />
+            {main.length > 0 ? (
+              <News mainNews={main} secondaryNews={secondary} />
+            ) : (
+              <p className="text-gray-500 py-8">Nenhuma notícia disponível no momento.</p>
+            )}
           </section>
-          {/* coluna da direita  */}
+
+          {/* Sidebar */}
           <aside>
             <Title
               title="Vereadores em ação"
               showLink={true}
               href="/vereadores-em-ação"
             />
-            <CouncilorList newsList={councilor} />
+            {councilor.length > 0 ? (
+              <NewsList newsList={councilor} />
+            ) : (
+              <p className="text-gray-500 py-8">Nenhuma ação registrada.</p>
+            )}
           </aside>
         </div>
       </div>
+
+      {/* section de publicações oficiais e legislativas'*/}
       <div className="bg-primary w-full py-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 py-3 px-3 md:px-0">
-            {/* cols left */}
+        <div className="max-w-7xl mx-auto px-4 md:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 py-3">
+            {/* Legislative Activities */}
             <section className="md:border-r md:border-gray-100/20 md:px-3">
               <div className="flex gap-3 items-center mb-3">
-                <Icon icon={"Balance"} width={28} height={28} />
+                <Icon icon="Balance" width={28} height={28} />
                 <Title
-                  title={"Atividades Legislativas"}
+                  title="Atividades Legislativas"
                   showBorder={false}
                   showLink={false}
                   variant="secondary"
                 />
               </div>
-              <p className="text-light/70">
-                Nesta seção estão reunidas todas as proposições dos vereadores,
-                que são ferramentas formais para sugerir, debater e aprovar
-                ações que impactam a população.
-              </p>
+              <p className="text-light/70">Nesta seção estão reunidas todas as proposições dos vereadores, que são ferramentas formais para sugerir, debater e aprovar ações que impactam a população.
+
+</p>
               <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                 {atividadesLegislativas.map((item) => (
                   <Card
@@ -96,23 +137,22 @@ export default function Home() {
                 ))}
               </article>
             </section>
-            {/* cols rigth */}
+
+            {/* Official Publications */}
             <section>
               <div className="flex gap-3 items-center mb-3">
-                <Icon icon={"File"} width={28} height={28} />
+                <Icon icon="File" width={28} height={28} />
                 <Title
-                  title={"Publicações Oficiais"}
+                  title="Publicações Oficiais"
                   showBorder={false}
                   showLink={false}
                   variant="secondary"
                 />
               </div>
               <p className="text-light/70">
-                Nesta seção estão reunidas todas as proposições dos vereadores,
-                que são ferramentas formais para sugerir, debater e aprovar
-                ações que impactam a população.
+              Nesta seção estão reunidas todas as publicações oficiais, que são ferramentas formais para sugerir, debater e aprovar ações que impactam a população.
               </p>
-              <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+              <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-11">
                 {publicacoesOficiais.map((item) => (
                   <Card
                     title={item.title}
@@ -126,10 +166,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-        <div className="max-w-7xl mx-auto px-4">
-          <CouncilCarousel council={councilSlider} />
-        </div>
-        <Footer />
+      {/* Council Carousel */}
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
+        <CouncilCarousel council={councilSlider} />
+      </div>
+     
     </div>
   );
 }

@@ -1,8 +1,7 @@
 "use client";
 
 import { Icon } from "@/src/ui/Icon";
-
-
+import { useEffect } from "react";
 
 export function SearchModal({
   open,
@@ -11,6 +10,13 @@ export function SearchModal({
   open: boolean;
   onClose: () => void;
 }) {
+
+  useEffect(() => {
+    document.body.classList.toggle("modal-open", open);
+    return () => document.body.classList.remove("modal-open");
+  }, [open]);
+
+
   return (
     <div
       className={`fixed inset-0 bg-black/50 backdrop-blur-md flex items-center justify-center z-50 transition-opacity duration-300 ${

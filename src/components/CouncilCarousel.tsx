@@ -4,20 +4,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Icon } from "../ui/Icon";
 import { Autoplay, Navigation } from "swiper/modules";
 
-import { council } from "@/src/types/council";
+import { Council } from "@/src/types/council";
+
+import { memo } from "react";
 
 import Image from "next/image";
 
 interface CouncilCarouselProps {
-  council: council[];
+  council: Council[];
 }
 
-export default function CouncilCarousel({ council }: CouncilCarouselProps) {
+export  function CouncilCarousel({ council }: CouncilCarouselProps) {
+  if (!council || council.length === 0) {
+    return (
+      <div className="max-w-[1400px] mx-auto py-10 text-center text-gray-500">
+        <p>Nenhum vereador disponível no momento.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-[1400px] mx-auto py-10">
       <div className="flex flex-col md:flex-row items-start gap-8">
         {/* esquerda texto */}
-        <div className="flex-1 md:w-1/3 mt-8">
+        <div className="w-full md:w-1/3 mt-8">
           <span className="text-sm text-gray-800 mb-4">Vereadores da</span>
           <h2 className="font-bold uppercase text-2xl md:text-3xl text-primary">
             Câmara de Libertália
@@ -28,20 +38,28 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
 
           {/* botoes de navegação */}
           <div className="mt-8 flex space-x-4">
-            <button className="swiper-prev w-11 h-11 rounded-full border-2 border-primary flex items-center justify-center">
+            <button
+              className="swiper-prev w-11 h-11 rounded-full border-2 border-primary flex items-center justify-center"
+              type="button"
+              aria-label="anterior"
+            >
               <Icon icon={"Arrow-Left"} width={24} height={24} />
             </button>
-            <button className="swiper-next w-11 h-11 rounded-full border-2 border-primary flex items-center justify-center">
-              <Icon icon={"Arrow-Rigth2"} width={24} height={24} />
+            <button className="swiper-next w-11 h-11 rounded-full border-2 border-primary flex items-center justify-center" type="button" aria-label="próximo">
+              <Icon icon={"Arrow-Right"} width={24} height={24} />
             </button>
           </div>
         </div>
         {/* carousel */}
-        <div className="flex-1 md:w-2/3 w-full">
+        <div className="w-full md:w-2/3">
           <Swiper
-            className="pl-4"
+            className="px-2 md:px-0"
             modules={[Navigation, Autoplay]}
-            autoplay={{ delay: 5000 }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             spaceBetween={16}
             slidesPerView={1.55}
             centeredSlides={false}
@@ -59,9 +77,12 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
             {council.map((card) => (
               <SwiperSlide
                 key={card.id}
-                className={`transition-transform duration-300 py-6 ${
-                  card.id % 2 === 0 ? "-translate-y-4" : "translate-y-2"
-                }`}
+                className="py-6"
+                style={{
+                  transform: `translateY(${
+                    card.id % 2 === 0 ? "-1rem" : "0.5rem"
+                  })`,
+                }}
               >
                 <div className="relative rounded-xl overflow-hidden w-full h-80">
                   <Image
@@ -69,8 +90,10 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
                     alt={card.name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/90" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
                   <div className="absolute bottom-2 left-4 right-4 text-light py-2">
                     <h4 className="text-md font-semibold uppercase">
                       {card.name}
@@ -97,3 +120,6 @@ export default function CouncilCarousel({ council }: CouncilCarouselProps) {
     </div>
   );
 }
+
+
+export default memo(CouncilCarousel);

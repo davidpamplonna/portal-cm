@@ -2,31 +2,31 @@
 
 @import "leaflet/dist/leaflet.css";
 
-
-
 @theme {
   /* colors */
 
   --color-primary: #050642;
-  --color-secondary: #004AAD;
-  --color-light: #FFFFFF;
-  --color-descriprion: #364153;
+  --color-secondary: #004aad;
+  --color-light: #ffffff;
+  --color-description: #364153;
 }
 
 @layer components {
-   h1,h2,h3, p {
-   @apply tracking-wide leading-snug
+  h1,
+  h2,
+  h3,
+  p {
+    @apply tracking-wide leading-snug;
   }
 
   button {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
 }
 
 body {
   font-family: var(--font-roboto);
 }
-
 
 .fade {
   opacity: 0;
@@ -37,3 +37,21 @@ body {
   opacity: 1;
 }
 
+body.body-no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+.swiper-pagination-bullet{
+  background-color: var(--color-lime-50) !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--color-secondary) !important;
+}
+
+body.menu-open,.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}

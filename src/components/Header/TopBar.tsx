@@ -16,13 +16,15 @@ export function TopBar() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(true);
 
-  useEffect(() => {
+ useEffect(() => {
+    if (!news || news.length === 0) return;
+
     const interval = setInterval(() => {
-      setShow(false); // fade-out + slide-up
+      setShow(false); 
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % news.length);
-        setShow(true); // fade-in + slide-down
-      }, 350); // metade da duração da animação para ficar natural
+        setShow(true);
+      }, 350); 
     }, 4000);
 
     return () => clearInterval(interval);

@@ -27,7 +27,7 @@ export function Menu({
 
   const styles = {
       desktop:
-      "hover:text-gray-300/95 transition-colors duration-200 uppercase font-semibold",
+      "hover:text-[#0056cd] transition-colors duration-200 uppercase font-semibold",
     mobile:
       "text-light uppercase text-sm font-semibold hover:text-primary transition-colors",
   }
@@ -35,16 +35,14 @@ export function Menu({
 
   return(
   <>
-      {navLinks.map(({ href, label }) => {
-        const active = pathname === href;
+       {navLinks.map(({ href, label }) => {
+        const active = pathname ? pathname === href || pathname.startsWith(href + "/") : false;
 
         return (
           <Link
             key={href}
             href={href}
-            className={`${styles[variant]} ${
-              active ? "text-gray-200 font-bold" : ""
-            }`}
+            className={`${styles[variant]} ${active ? "text-[#0056cd] font-bold" : ""}`}
           >
             {label}
           </Link>

@@ -1,6 +1,6 @@
  
  
- type itemMenu = {
+ export type itemMenu = {
     title: string;
     link: string;
     label?: string;
@@ -8,7 +8,7 @@
 
 
 const atividadesLegislativas: itemMenu[] = [
-  { title: "Emendas a Lei Orgânica", link: "/emendas-lei-organica" },
+  { title: "Emendas à Lei Orgânica", link: "/emendas-lei-organica" },
   { title: "Projeto de Ato Legislativo", link: "/projeto-ato-legislativo" },
   { title: "Projeto de Complementares", link: "/pl-complementares-ordinarias" },
   { title: "Projetos de Decreto", link: "/projetos-decreto" },
