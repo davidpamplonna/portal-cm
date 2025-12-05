@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ Portal Câmara Municipal de Libertália
 
-## Getting Started
+Portal web moderno e responsivo da Câmara Municipal de Libertália, desenvolvido com tecnologias de ponta para oferecer informações legislativas, notícias e dados de vereadores.
 
-First, run the development server:
+## 🎯 Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Criar uma plataforma digital central que centraliza:
+- 📰 Notícias e atividades legislativas
+- 👥 Informações sobre vereadores
+- 📋 Publicações oficiais e documentos
+- 🔍 Busca inteligente de conteúdo
+- ♿ Acessibilidade total (WCAG 2.1 AA)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
+- **Framework:** Next.js 14+ (App Router)
+- **Linguagem:** TypeScript
+- **Estilização:** Tailwind CSS
+- **Componentes:** React 18+
+- **Carrossel:** Swiper
+- **Mapas:** Leaflet + React-Leaflet
+- **Ícones:** Ícone customizado com SVG
 
-## Learn More
+### Qualidade de Código
+- TypeScript (type-safe)
+- ESLint (linting)
+- Prettier (formatação)
+- React Best Practices
 
-To learn more about Next.js, take a look at the following resources:
+### Performance & SEO
+- Image Optimization (Next.js Image)
+- Dynamic Import (code splitting)
+- Metadata otimizada
+- Open Graph para redes sociais
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Funcionalidades Principais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ✅ Notícias
+- Carrossel principal com fade effect
+- Notícias secundárias em grid responsivo
+- Links para leitura completa
+- Categorias de notícias
 
-## Deploy on Vercel
+### ✅ Vereadores
+- Carrossel com informações dos vereadores
+- Foto, cargo e mandato
+- Navegação com botões prev/next
+- Autoplay com pausa ao hover
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ✅ Atividades Legislativas
+- Grid de categorias (Projetos, Resoluções, etc.)
+- Links para documentos
+- Publicações oficiais organizadas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ Busca
+- Modal de busca integrado
+- Atalho com Ctrl/Cmd + K
+- Sugestões inteligentes (planejado)
+
+### ✅ Mapa
+- Localização da câmara
+- Integração com Leaflet
+- Marcadores customizados
+
+### ✅ Acessibilidade
+- WCAG 2.1 AA compliant
+- Skip links
+- Navegação por teclado
+- Screen reader friendly
+- Contraste de cores WCAG AA
+
+### ✅ Responsividade
+- Mobile-first design
+- Breakpoints: 480px, 640px, 768px, 1024px, 1280px
+- Menu mobile colapsável
+- Imagens otimizadas
