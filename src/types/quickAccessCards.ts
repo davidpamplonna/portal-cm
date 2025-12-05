@@ -12,7 +12,7 @@ interface quickAccessCardsProps{
 const quickAccessCards: quickAccessCardsProps[] = [
     {
       title: "Projetos de Lei",
-      icon: "PL",
+      icon: "Projeto",
       description: "Acompanhe os projetos em tramitação",
       link: "/projetos-de-lei",
     },
@@ -24,15 +24,15 @@ const quickAccessCards: quickAccessCardsProps[] = [
     },
     {
       title: "Documentos Oficiais",
-      icon: "Files",
+      icon: "Documentos",
       description: "Atas, relatórios e publicações da Câmara",
       link: "/documentos-oficiais",
     },
     {
       title: "Audiências Públicas",
-      icon: "Files",
+      icon: "Audiencia",
       description:
-        "Cronograma das sessões ordinárias/extraordinárias",
+        "Cronograma das sessões legislativas",
       link: "/audiencias-publicas",
     },
   ];

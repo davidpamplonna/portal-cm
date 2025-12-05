@@ -7,7 +7,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center" aria-label="Ir para a página inicial">
       <Image
-        src="/logo2.png"
+        src="/logo-oficial.png"
         alt="Logo da Câmara"
         width={230}
         height={90}

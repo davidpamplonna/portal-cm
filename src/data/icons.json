@@ -35,10 +35,6 @@
     "name": "Balance",
     "src": "/icons/balance.svg"
   },
-  "File": {
-    "name": "File",
-    "src": "/icons/file.svg"
-  },
   "Arrow-Left": {
     "name": "Arrow-Left",
     "src": "/icons/arrow-left.svg"
@@ -49,7 +45,7 @@
   },
    "Arrow-Rigth-Top": {
     "name": "Arrow-Rigth-Top",
-    "src": "/icons/arrow-right-top.svg"
+    "src": "/icons/arrow-small-right.svg"
   },
     "Facebook": {
       "name": "Facebook",
@@ -63,10 +59,22 @@
       "name": "Youtube",
       "src": "/icons/youtube.svg"
     },
-    "PL": {
-      "name": "PL",
-      "src": "/icons/files.svg"
-    }
+    "Audiencia": {
+      "name": "Audiencia",
+      "src": "/icons/class.svg"
+    },
+    "Documentos": {
+      "name": "Documentos",
+      "src": "/icons/features-alt.svg"
+    },
+    "Projeto": {
+      "name": "Projeto",
+      "src": "/icons/project.svg"
+    },
+     "File": {
+    "name": "File",
+    "src": "/icons/file.svg"
+  }
     
 }
 

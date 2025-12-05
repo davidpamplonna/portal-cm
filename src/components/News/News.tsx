@@ -81,14 +81,12 @@ export function News({ mainNews, secondaryNews }: NewsProps) {
                 {/* conteúdo */}
                 <div className="absolute inset-0 flex items-end px-6 md:px-8 md:py-6 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
                   <div className="flex flex-col gap-2 mb-3 md:mb-0">
-                    <h2 className="text-light uppercase font-bold text-base md:text-2xl leading-snug line-clamp-2 hover:underline">
+                    <h2 className="text-light uppercase font-bold text-xl md:text-2xl leading-snug line-clamp-2 hover:underline">
                       <Link href={`/noticia/${slugify(news.title)}`}>
                         {news.title}
                       </Link>
                     </h2>
-                    <p className="text-gray-300 text-md line-clamp-2">
-                      {news.description}
-                    </p>
+                    
                     <span className="text-gray-200/80 text-xs md:text-sm">
                       {news.date}
                     </span>
@@ -130,7 +128,7 @@ export function News({ mainNews, secondaryNews }: NewsProps) {
 
             <div className="absolute inset-0 flex items-end p-3 bg-gradient-to-t from-black/90 via-transparent">
               <div className="flex flex-col gap-1">
-                <h3 className="text-light text-sm md:text-base font-semibold line-clamp-2 hover:underline">
+                <h3 className="text-light text-lg md:text-base font-semibold line-clamp-2 hover:underline">
                   <Link href={`/noticia/${slugify(news.title)}`}>
                     {news.title}
                   </Link>

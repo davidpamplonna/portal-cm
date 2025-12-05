@@ -28,12 +28,12 @@ const variantConfig = {
   },
   secondary: {
     container:
-      "bg-light/90 flex flex-col justify-center items-center text-center rounded-xl py-6 px-1 md:px-4 hover:bg-light focus:ring-2 focus:ring-primary/50 focus:outline-none hover:-translate-y-1",
+      "bg-light/90 flex flex-col justify-center items-center text-center rounded-xl py-6 px-2 md:px-4 hover:bg-light focus:ring-2 focus:ring-primary/50 focus:outline-none hover:-translate-y-1",
     iconWrapper: "bg-primary/10 rounded-full p-3 mb-3",
     iconColor: "text-primary",
     title: "text-primary font-bold text-base md:text-lg ",
-    description: "mt-2 text-gray-800 text-sm md:text-base",
-    link: "flex gap-2 mt-2 text-gray-700 text-xs md:text-sm hover:text-secondary transition-all duration-300",
+    description: "mt-2 text-gray-800 text-sm md:text-base ",
+    link: "flex gap-1 mt-3 text-gray-700 text-xs md:text-sm hover:text-secondary transition-all duration-300 ",
   },
 };
 
@@ -61,7 +61,7 @@ function CardComponent({
             icon={icon}
             width={40}
             height={40}
-            className={`w-8 h-8 md:w-9 md:h-9 ${v.iconColor}`}
+            className={`w-5 h-5 md:w-9 md:h-9 ${v.iconColor}`}
             aria-hidden="true"
           />
         </div>
@@ -74,18 +74,18 @@ function CardComponent({
       {variant === "secondary" && link && (
         <Link
           href={link}
-          className={v.link}
+          className={`${v.link} group`}
           target={isExternal ? "_blank" : undefined}
           rel={isExternal ? "noopener noreferrer" : undefined}
           aria-label={label ? `${label} — ${title}` : title}
         >
           <span>{label}</span>
-          <Image
-            src="/icons/arrow-right-top.svg"
-            alt=""
+          <Icon 
+            icon="Arrow-Rigth-Top" 
+            width={18} 
+            height={18} 
+            className="w-5 h-5 mt-[0.4px] md:w-5 md:h-5 md:mt-[0.2px] transition-transform duration-300 group-hover:translate-x-1" 
             aria-hidden="true"
-            width={14}
-            height={14}
           />
         </Link>
       )}

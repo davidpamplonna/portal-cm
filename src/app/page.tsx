@@ -62,7 +62,7 @@ export default function Home() {
 
           {/* Quick Access Cards */}
           <div className="mt-10 w-full">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-[1000px] mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-[1000px] mx-auto">
               {quickAccessCards.map((card) => (
                 <Card 
                   key={card.title}
@@ -70,7 +70,7 @@ export default function Home() {
                   variant="secondary"
                   title={card.title}
                   description={card.description}
-                  link={card.title}
+                  link={card.link}
                   label="Consultar"
                 />
               ))}
