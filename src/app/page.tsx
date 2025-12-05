@@ -53,9 +53,9 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="w-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat 
+      <div className="w-full bg-[url('/assets/bannerv2.png')] bg-cover bg-no-repeat 
                       min-h-[540px] sm:min-h-[600px] md:min-h-[400px] 
-                      bg-center md:bg-top">
+                      bg-rigth md:bg-center">
         <section className="py-8 md:py-10 px-4">
           <HeroTitle />
           <HeroSearch />
@@ -113,7 +113,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 py-3">
             {/* Legislative Activities */}
-            <section className="md:border-r md:border-gray-100/20 md:px-3">
+            <section>
               <div className="flex gap-3 items-center mb-3">
                 <Icon icon="Balance" width={28} height={28} />
                 <Title
@@ -139,7 +139,7 @@ export default function Home() {
             </section>
 
             {/* Official Publications */}
-            <section>
+            <section className="px-0 md:px-4 md:border-l md:border-gray-100/20">
               <div className="flex gap-3 items-center mb-3">
                 <Icon icon="File" width={28} height={28} />
                 <Title
@@ -150,9 +150,9 @@ export default function Home() {
                 />
               </div>
               <p className="text-light/70">
-              Nesta seção estão reunidas todas as publicações oficiais, que são ferramentas formais para sugerir, debater e aprovar ações que impactam a população.
+             Reúne atos, comunicados e documentos oficiais da Câmara, incluindo legislações, portarias, editais, resoluções, licitações e outros registros atualizados.
               </p>
-              <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-11">
+              <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                 {publicacoesOficiais.map((item) => (
                   <Card
                     title={item.title}

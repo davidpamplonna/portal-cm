@@ -1,5 +1,6 @@
 "use client";
 
+
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
