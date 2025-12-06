@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     url: "https://cmlibertalia.gov.br",
     title: "Câmara Municipal de Libertália",
     description: "Portal da Câmara Municipal com notícias, vereadores e informações oficiais",
-    images: [{ url: "/assets/og-image.png", width: 1200, height: 630 }],
   },
 };
 

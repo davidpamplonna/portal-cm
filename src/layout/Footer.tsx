@@ -6,7 +6,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 
 import { SocialLink } from "../types/socialLink";
-
+import { Logo } from "../components/Header/Logo";
 const Map = dynamic(() => import("../components/Map"), {
   ssr: false, 
 });
@@ -24,14 +24,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0 items-start">
           {/* logo e redes sociais */}
-          <section className="flex flex-col gap-3 ">
+          <section className="flex flex-col justify-center gap-3 items-center text-center">
             <Image
-              src="/assets/footer-logo.png"
+              src="/assets/logo-rodape.png"
               width={250}
               height={250}
               alt="Logo da Câmara Municipal de Libertália"
             />
-
+            
             <div className="flex justify-center gap-4 mt-4">
              {socialLinks.map((social) => (
               <Link 
@@ -115,8 +115,8 @@ export function Footer() {
                 <Image
                   src="/assets/cm-radio.png"
                   alt="radio logo"
-                  width={220}
-                  height={220}
+                  width={210}
+                  height={210}
                 />
               </Link>
             </div>

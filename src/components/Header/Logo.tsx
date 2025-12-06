@@ -1,13 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
-
 export function Logo() {
   return (
     <Link href="/" className="flex items-center" aria-label="Ir para a página inicial">
       <Image
-        src="/logo-oficial.png"
+        src="/assets/logo-oficial.png"
         alt="Logo da Câmara"
         width={230}
         height={90}
@@ -17,3 +15,4 @@ export function Logo() {
     </Link>
   );
 }
+

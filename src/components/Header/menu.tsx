@@ -27,7 +27,7 @@ export function Menu({
 
   const styles = {
       desktop:
-      "hover:text-[#0056cd] transition-colors duration-200 uppercase font-semibold",
+      "hover:text-[#227EFF] transition-colors duration-200 uppercase font-semibold",
     mobile:
       "text-light uppercase text-sm font-semibold hover:text-primary transition-colors",
   }
@@ -42,7 +42,7 @@ export function Menu({
           <Link
             key={href}
             href={href}
-            className={`${styles[variant]} ${active ? "text-[#0056cd] font-bold" : ""}`}
+            className={`${styles[variant]} ${active ? "text-[#227EFF] font-bold" : ""}`}
           >
             {label}
           </Link>
