@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 import "../styles/globals.css";
 import { Header } from "../layout/Header";
@@ -14,12 +14,12 @@ const roboto = Roboto({
   display: "swap",
 });
 
+// Metadata SEM viewport
 export const metadata: Metadata = {
   title: "Portal Câmara Municipal de Libertália",
   description:
     "Portal da Câmara Municipal com notícias, vereadores, atividades legislativas e publicações oficiais",
   keywords: "câmara, vereadores, legislação, Libertália",
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -42,6 +42,12 @@ export const metadata: Metadata = {
   },
 };
 
+// Viewport exportado separadamente
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -49,15 +55,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Preload de recursos críticos (opcional) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body
         className={`${roboto.variable} antialiased`}
         suppressHydrationWarning
@@ -70,15 +67,12 @@ export default function RootLayout({
           Ir para o conteúdo principal
         </Link>
 
-        {/* Header */}
         <Header />
 
-        {/* Main Content */}
         <main id="main-content" role="main">
           {children}
         </main>
 
-        {/* Footer */}
         <Footer />
       </body>
     </html>

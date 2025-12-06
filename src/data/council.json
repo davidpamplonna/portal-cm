@@ -4,7 +4,7 @@
     "id": 1,
     "name": "Carolina Souza Martins",
     "cargo": "Presidente",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 12,
     "image": "/council/carolina-souza.png"
   },
@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Marcos Vinícius Andrade",
     "cargo": "Vice-Presidente",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 8,
     "image": "/council/marcos-andrade.png"
   },
@@ -20,7 +20,7 @@
     "id": 3,
     "name": "Beatriz Nascimento Prado",
     "cargo": "1º Secretária",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 15,
     "image": "/council/beatriz-prado.png"
   },
@@ -28,7 +28,7 @@
     "id": 4,
     "name": "Rafael Gomes Duarte",
     "cargo": "2º Secretario",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 5,
     "image": "/council/rafael-duarte.png"
   },
@@ -36,7 +36,7 @@
     "id": 5,
     "name": "Júlia Ferreira Costa",
     "cargo": "Vereadora",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 19,
     "image": "/council/julia-ferreira.png"
   },
@@ -44,7 +44,7 @@
     "id": 6,
     "name": "Eduardo Lima Barros",
     "cargo": "Vereador",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 9,
     "image": "/council/eduardo-lima.png"
   },
@@ -52,7 +52,7 @@
     "id": 7,
     "name": "Ana Luísa Pereira",
     "cargo": "Vereadora",
-    "mandato": "2025-2028",
+    "mandato": "2025-2026",
     "materias": 14,
     "image": "/council/ana-luisa.png"
   }
